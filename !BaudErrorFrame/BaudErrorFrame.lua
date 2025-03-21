@@ -34,6 +34,9 @@ function BaudErrorFrame_OnEvent(self, event, ...)
 		if type(BaudErrorFrameConfig) ~= "table" then
 			BaudErrorFrameConfig = {}
 		end
+		if type(QueueError) ~= "table" then  -- Add this check
+            		QueueError = {}
+		end
 		for Key, Value in ipairs(QueueError)do
 			BaudErrorFrameShowError(Value)
 		end
